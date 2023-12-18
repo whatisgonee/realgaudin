@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>blog</title>
+
+		<meta charset="UTF8">
+
+		<!-- My website uses Bootstrap v. 5.3.2. min. -->
+		<!-- Read more on Bootstrap here: https://getbootstrap.com/ -->
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+		<!-- This website uses jQuery v. 3.7.1. min. -->
+		<!-- Read more on jQuery here: https://jquery.com/ -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	
+		<!-- Custom script and style files -->
+		<link rel="stylesheet" href="../style.css" type="text/css">
+
+		<!-- Website's Icon -->
+		<link href="../media/Lautrec_Laundress.ico" rel="icon" type="image/x-icon">
+		<script src="../script.js" type="text/javascript"></script>
+	</head>
+
+	<body onload="load()">
+		<!-- Element for containing desktop icons (links) in the background -->
+		<div class="icons">
+			<figure class="desktop-icon">
+				<img src="../media/recycle_bin_empty-4.png">
+				<figcaption class="desktop-label">Recycle Bin<figcaption>
+			</figure>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/computer_explorer-4.png">
+					<figcaption class="desktop-label">My Computer<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/directory_closed-4.png">
+					<figcaption class="desktop-label">Gallery<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/notepad-2.png">
+					<figcaption class="desktop-label">Blog<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/modem-5.png">
+					<figcaption class="desktop-label">About<figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<!-- Element for containg images, they have absolute position, so the container's position doesn't matter -->
+		<div class="images" id="images">
+		</div>
+
+		<!-- Bootstrap container class with a set width and height -->
+		<!-- My website does not use fluid-container, as I don't want it to take up all the width space -->
+		<div class="container content" id="window">
+			<!-- Bootstrap row class -->
+			<div class="row header">
+				<!-- This is the header row and it takes up all the columns -->
+				<div class="col-md-12">
+					<!-- This is the icon image (website design is built around 90s PCs) -->
+					<img class="icon" src="../media/computer_explorer-2.png" alt="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc." title="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc.">
+
+					<span>K. Gaudin Web Corner | <a href="/" title="Home">Home</a> | <a href="/gallery/">Gallery</a> | <a href="/blog/">Blog</a> | <a href="/about.html">About</a></span>
+
+					<a href="javascript:void(0);" onclick="closeWindow()" title="Close window"><img src="../media/close-icon.png" class="icon close"></a>
+				</div>
+			</div>
+			<div class="row" style="padding:5px">
+				<div class="col-md-3 nopad outer-container" id="sidebar">
+				</div>
+				<div class="col-md-9 nopad outer-container">
+					<div class="inner-container">
+						<h2>Blog Directory<img class="blog-header" src="../media/liseuse_a_la_lampe.jpg" width="430px" align="right" title="Liseuse a la Lampe (Woman Reading by Lamplight), 1879, Félix-Hilaire Buhot."><div class="caption-label text-right">Liseuse a la Lampe (Woman Reading by Lamplight), 1879, Félix-Hilaire Buhot.</div></h2>
+						<hr>
+						<p><span class="tab"></span><span class="tab"></span>This is the blog directory which hosts my articles and essays. There is no schedule to posting certain things here and please take in mind that I try to put as much research into each and every article as I can. This means that producing them won't take me just a few weeks, especially considering that I oftentimes don't do anything in my free time and simply procrastinate. If you like what you read here, consider supporting me on my <a href="https://ko-fi.com/realgaudin" target="_blank">Ko-Fi</a>!</p>
+						<hr>
+						<h3>Articles</h3>
+						<hr>
+						<p><span class="tab"></span><span class="tab"></span><strong><a href="fridays-do-not-exist.html">Fridays Do Not Exist</a></strong> – an argument against gender dichotomy, biological essentialism, transphobia, and a deconstruction of the idea that Fridays exist.</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container notepad">
+			<div class="row header">
+				<!-- This is the header row and it takes up all the columns -->
+				<div class="col-md-12">
+					<!-- This is the icon image (website design is built around 90s PCs) -->
+					<img class="icon" src="../media/notepad-3.png" alt="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc." title="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc.">
+
+					<span>Info.txt - Notepad</span>
+
+					<img src="../media/close-icon.png" class="icon close" title="Close window">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 inner-container" style="min-height:190px;max-width:285px">
+					in order to re-open the closed window, simply click on the start icon below at the bottom of the page. alternatively, you can click <a href="javascript:void(0);" onclick="closeWindow()">here</a>.<br>
+					if this page is overflown (too small), please resize it. optimal size is 1872x995px
+				</div>
+			</div>
+		</div>
+
+		<!-- The launch menu from Windows 98 -->
+		<div class="fluid-container bar">
+			<div class="start-button" style="width:60px;height:25px;text-align:center">
+				<a href="javascript:void(0);" onclick="closeWindow()">
+					<img src="../media/start-button.png">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>
