@@ -305,7 +305,7 @@ p {
 }
 /* ==== */
 
-
+/* Responsive design for mobile layout */
 @media (max-width:600px)  {
 	body {
 		min-height: 100vh;
