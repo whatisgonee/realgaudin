@@ -1,144 +1,57 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 	<head>
-		<title>Fridays Do Not Exist</title>
+		<title>fridays do not exist</title>
 
 		<meta charset="UTF8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- For embeds and stuff -->
-		<meta content="Fridays Do Not Exist by K. Gaudin" property="og:title">
-		<meta content="An argument against gender dichotomy, biological essentialism, transphobia, and a deconstruction of the idea that Fridays exist." property="og:description">
-		<meta content="https://www.realgaudin.uk/gallery" property="og:url">
-		<meta content="https://realgaudin.uk/media/friday.jpg" property="og:image">
-		<meta content="#008080" data-react-helmet="true" name="theme-color">
-
-		<!-- My website uses Bootstrap v. 5.3.2. min. -->
-		<!-- Read more on Bootstrap here: https://getbootstrap.com/ -->
-
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-		<!-- This website uses jQuery v. 3.7.1. min. -->
-		<!-- Read more on jQuery here: https://jquery.com/ -->
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	
-		<!-- Custom script and style files -->
-		<link rel="stylesheet" href="../style.css" type="text/css">
-
-		<!-- Website's Icon -->
-		<link href="../media/Lautrec_Laundress.ico" rel="icon" type="image/x-icon">
-		<script src="../script.js" type="text/javascript"></script>
+		<link href="../media/icon.ico" rel="icon" type="image/x-icon">
+		<link href="../style.css" rel="stylesheet" type="text/css">
 	</head>
-
-	<body onload="load()">
-		<!-- Element for containing desktop icons (links) in the background -->
-		<div class="icons">
-			<figure class="desktop-icon">
-				<img src="../media/recycle_bin_empty-4.png">
-				<figcaption class="desktop-label">Recycle Bin<figcaption>
-			</figure>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/computer_explorer-4.png">
-					<figcaption class="desktop-label">My Computer<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/directory_closed-4.png">
-					<figcaption class="desktop-label">Gallery<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/notepad-2.png">
-					<figcaption class="desktop-label">Blog<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/modem-5.png">
-					<figcaption class="desktop-label">About<figcaption>
-				</figure>
-			</a>
-		</div>
-
-		<!-- Element for containg images, they have absolute position, so the container's position doesn't matter -->
-		<div class="images" id="images"></div>
-
-		<!-- Bootstrap container class with a set width and height -->
-		<!-- My website does not use fluid-container, as I don't want it to take up all the width space -->
-		<div class="container content" id="window">
-			<!-- Bootstrap row class -->
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="../media/computer_explorer-2.png" alt="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc." title="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc.">
-
-					<span>K. Gaudin | <a href="/" title="Home">Home</a> | <a href="/gallery/">Gallery</a> | <a href="/blog/">Blog</a> | <a href="/about.html">About</a></span>
-
-					<a href="javascript:void(0);" onclick="closeWindow()" title="Close window"><img src="../media/close-icon.png" class="icon close"></a>
+	
+	<body>
+		<div id="main" class="container-fluid">
+			<a href="/index.html"><- back<br><br></a>
+			<h1>fridays do not exist</h1>
+			<pre>       .--.           .---.        .-.
+.---|--|   .-.     | A |  .---. |~|    .--.
+.--|===|Ch|---|_|--.__| S |--|:::| |~|-==-|==|---.
+|%%|NT2|oc|===| |~~|%%| C |--|   |_|~|CATS|  |___|-.
+|  |   |ah|===| |==|  | I |  |:::|=| |    |GB|---|=|
+|  |   |ol|   |_|__|  | I |__|   | | |    |  |___| |
+|~~|===|--|===|~|~~|%%|~~~|--|:::|=|~|----|==|---|=|
+^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^-'</pre>
+			<p>16th of December, 2023 | 16.12.2023 | <a href="https://medium.com/@realgaudin/fridays-do-not-exist-a71eec31e2ff">read on medium</a></p>
+			<hr>
+			<center>
+				<div id="transring">
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-variables.js"></script>
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-widget.js"></script>
 				</div>
-			</div>
-			<div class="row" style="padding:5px">
-				<div class="col-md-3 nopad outer-container" id="sidebar">
-				</div>
-				<div class="col-md-9 nopad outer-container">
-					<div class="inner-container">
-						<h2>Fridays Do Not Exist <img class="blog-header" src="../media/friday.jpg" width="480px" align="right" title="Friday Evening, United States Beecher Illinois, 2020."><div class="caption-label text-left">Friday Evening, United States Beecher Illinois, 2020.</div></h2>
-						<hr>
-						<p><i>16th of December, 2023 | 16.12.2023</i></p>
-						<hr>
-						<p><span class="tab"></span><span class="tab"></span>The essay is written in the style of a monologue of a fictional character – Ms. A. that is directed at her parents.
-						</p>
-						<p><span class="tab"></span><span class="tab"></span>A.: “...and if you don’t consider me your daughter, then I don’t consider you my father. It isn’t difficult for me, and I don’t believe in a ‘blood bond’ between parents and children. The concept of family is as fictional and made-up as the concept of gender. It’s a social idea, and it doesn’t hold any weight in objective reality. If I am not a woman, then it means that you are not my parents.</p>
-						<p><span class="tab"></span><span class="tab"></span>“You always say that I’m not a woman because I was born with a penis. You say that we cannot deny or reject our nature, and I might agree with you on that. It doesn’t matter how far away we will stray from our biology; it will always be an inseparable part of our lives. But Simone de Beauvoir once wrote that nature is real to us only for as long as we consider it our reality. Society takes the notion that the penis is masculine and the vagina is feminine as a truth. But, of course, we have to understand that both of these ideas are as fragile as the ideas of ‘society’ and ‘family’. They appear to us as a fact, but not because objective reality dictates it as such, but because we dictate it as such. In a society where, on the other hand, gender is connected not with sex but with the inner feelings of a person, there wouldn’t be so many arguments about the ‘human nature’, genitals, and gender.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Sartre said that our existence precedes our essence. We are born into this world as nobodies. Only later, after existing for some time, can we find our life’s meaning and goal. Therefore, it would be illogical to go on and say that we are born as men or women—an idea that is derived purely from the idea around genitals. According to Beauvoir, women are made, not born, and the same can be said about men and people who do not associate themselves with either of the gender binary ends.</p>
-						<p><span class="tab"></span><span class="tab"></span>“I too believe that we are born into this world as nobodies. It doesn’t matter whether we are born with a penis, a vagina, both, or neither; we are still born meaningless. When exiting the womb, we are not granted some objective or divine meaning or essence because I reject the notion of a god. Our nature is as meaningless as humans at their birth because only things that are created by a subject can possess meaning, including subjects themselves. Nature was not created by anybody, so it doesn’t have any essence a priori. Of course, if you believe in a god, then it can be argued that everything was created by a deity, which means everything has the ability to possess the missing meaning. However, faith in a god is, too, subjective and fragile, just like our current beliefs and traditions around our genitals.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Our bodies are vessels through which we interact with reality. We are not our bodies; instead, our bodies are only a part of us. We are something that transcends the physical realm, something infinite that is contained inside a finite physique. Based on this, some argue that despite our endless mental capabilities, we still cannot go beyond the borders of our bodies. The idea by itself is correct: no matter how long you might imagine and believe that you can lift a car, it’s unlikely you will actually be able to do it. But this notion is used to prove that there is some connection between biology (i.e., our nature and, to a lesser extent, our genitals) and our gender. In reality, such a connection is not real.</p>
-						<p><span class="tab"></span><span class="tab"></span>“To accept the inherent importance of genitals to one’s gender, we need to prove that this position is objective. If not, it’d mean that the interpretation of gender as a correlate of sex will be equally subjective as the interpretation that gender is a personal decision based on the inner feelings of a person. Without such proof, the statement ‘penis makes you a man’ is equal to ‘I consider myself a man no matter my body.’ Disproving the former is easier than proving it. Simone de Beauvoir wrote that a person can only be called weak or strong in the presence of a coordinate system.</p>
-						<p><span class="tab"></span><span class="tab"></span>“If we take a person of any gender and imagine them in a vacuum, then we won’t be able to understand exactly how strong they are. No matter whether that person has a lot of muscles or not, without a relative point of view, it’s impossible to determine their physical strength. But as soon as we make up a certain point – let’s say a person who can lift 20kg is strong, and if less, then weak – it’s very easy to check the strength of any individual. But the border of the ‘20kg rule’ is completely arbitrary; it won’t reflect reality in any way whatsoever. The problem is not in the weight; whether it be 20kg or 100 kg, it doesn’t matter; the problem lies in the fact that there’s no such thing as a ‘strong person’ objectively. We made up the concept of strength and weakness, and it is set in historical and societal contexts, not grounded in some physical law of the universe.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Similarly, men and women, females and males, do not exist. In truth, there are only people with varying biological characteristics. I, for example, have black hair, whereas somebody else might have red hair. Differing genitals are just a deviation from the normal, except in this case, there doesn’t exist such a thing as ‘normal’. And you can see this in nature itself, the very thing that transphobes cling onto so dearly – the existence of hermaphrodites in various species shows that two types of genitals are not the only way. Reproductive organs are the same thing as different colours in the animal kingdom. Intersexuality among humans is another example of our biological diversity. It’s considered an anomaly only because we consider it an anomaly; our perception makes intersex people weird, not their inherent qualities. Humans cannot exist without a relative context. Our society dictates that certain genitals mean certain sex and gender. It is the truth only because we say it is the truth.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Weeks are built on the same principle. Today (at the time of writing, at least) is Friday. But we all understand that that’s not the case because the concept of ‘Fridays’ is imaginary. We, however, take it as truth because, without the idea of Fridays, Thursdays, and weeks, life would be very difficult. I’m not sure exactly how much the world would have changed had we woke up tomorrow not on Saturday and without months, years, and weeks, but I would know that it would have happened not because of some disruption in the space-time continuum but simply because we had rejected that notion. Perhaps humans are not anti-natural, and we can’t deny our biology, but only we can give it meaning. We control exactly what influence and what effects our biology has on us, depending on our perception of it.</p>
-						<p><span class="tab"></span><span class="tab"></span>“To say that ‘gender is a made-up thing’ and that ‘transgenders just imagine they’re of a certain gender; it’s not real’ then we also need to say that, in general, the idea of gender is fiction, just like weeks, societal structures, or families are. If gender is not real (but sex is, somehow), then we will also need to reject every social concept and idea ever. This ‘natural essentialism’ is just a step backwards; we have managed to get to where we are right now only thanks to complex abstract and fictional structures. Economics, society, education, and the sciences – those are just things that humans made up one day; they too are not objectively real. They all live in our heads, and we agree that they are real only because they are useful. We have the ability to change those structures and our understanding of them however we like. It’s necessary to walk away from gender dichotomies and biological essentialism. If we allow ourselves to live according to fictional dates and trade with fictional currency, then I believe we should also allow other people to live ‘fictional’ genders. Transgender women and transgender men are exactly the same as cisgender women and men because all of them are a fabrication of our mind, society, and historical context. They don’t reflect reality, because in reality, almost everything we believe in is, in fact, not real.”</p>
-						<hr>
-						<br>
-						<p><span class="tab"></span><span class="tab"></span>'<i>Friday Evening</i>' was used as the header photograph here and is copyrighted under CC BY-NC license. Non-commercial distribution is allowed with credit to the author. The photograph was found in the <a href="https://lccn.loc.gov/2023696235" target="_blank">Library of Congress</a>.<p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container notepad">
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="../media/notepad-3.png" alt="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc." title="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc.">
-
-					<span>Info.txt - Notepad</span>
-
-					<img src="../media/close-icon.png" class="icon close" title="Close window">
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 inner-container" style="min-height:190px;max-width:285px">
-					in order to re-open the closed window, simply click on the start icon below at the bottom of the page. alternatively, you can click <a href="javascript:void(0);" onclick="closeWindow()">here</a>.<br>
-					if this page is overflown (too small), please resize it. optimal size is 1872x995px
-				</div>
-			</div>
-		</div>
-
-		<!-- The launch menu from Windows 98 -->
-		<div class="fluid-container bar">
-			<div class="start-button" style="width:60px;height:25px;text-align:center">
-				<a href="javascript:void(0);" onclick="closeWindow()">
-					<img src="../media/start-button.png">
-				</a>
-			</div>
+			</center>
+			<hr>
+			<center><img alt="Woman sitting on a folding chair looking into a window of a brick building" title="Friday Evening, United States Beecher Illinois, 2020." src="../media/friday.jpg" style="margin-bottom:10px;width:100%"><br>Friday Evening, United States Beecher Illinois, 2020.</center>
+			<hr>
+			<p>The essay is written in the style of a monologue of a fictional character – Ms. A. that is directed at her parents.</p>
+			<p>A.: “...and if you don’t consider me your daughter, then I don’t consider you my father. It isn’t difficult for me, and I don’t believe in a ‘blood bond’ between parents and children. The concept of family is as fictional and made-up as the concept of gender. It’s a social idea, and it doesn’t hold any weight in objective reality. If I am not a woman, then it means that you are not my parents.</p>
+			<p>“You always say that I’m not a woman because I was born with a penis. You say that we cannot deny or reject our nature, and I might agree with you on that. It doesn’t matter how far away we will stray from our biology; it will always be an inseparable part of our lives. But Simone de Beauvoir once wrote that nature is real to us only for as long as we consider it our reality. Society takes the notion that the penis is masculine and the vagina is feminine as a truth. But, of course, we have to understand that both of these ideas are as fragile as the ideas of ‘society’ and ‘family’. They appear to us as a fact, but not because objective reality dictates it as such, but because we dictate it as such. In a society where, on the other hand, gender is connected not with sex but with the inner feelings of a person, there wouldn’t be so many arguments about the ‘human nature’, genitals, and gender.</p>
+			<p>“Sartre said that our existence precedes our essence. We are born into this world as nobodies. Only later, after existing for some time, can we find our life’s meaning and goal. Therefore, it would be illogical to go on and say that we are born as men or women—an idea that is derived purely from the idea around genitals. According to Beauvoir, women are made, not born, and the same can be said about men and people who do not associate themselves with either of the gender binary ends.</p>
+			<p>“I too believe that we are born into this world as nobodies. It doesn’t matter whether we are born with a penis, a vagina, both, or neither; we are still born meaningless. When exiting the womb, we are not granted some objective or divine meaning or essence because I reject the notion of a god. Our nature is as meaningless as humans at their birth because only things that are created by a subject can possess meaning, including subjects themselves. Nature was not created by anybody, so it doesn’t have any essence a priori. Of course, if you believe in a god, then it can be argued that everything was created by a deity, which means everything has the ability to possess the missing meaning. However, faith in a god is, too, subjective and fragile, just like our current beliefs and traditions around our genitals.</p>
+			<p>“Our bodies are vessels through which we interact with reality. We are not our bodies; instead, our bodies are only a part of us. We are something that transcends the physical realm, something infinite that is contained inside a finite physique. Based on this, some argue that despite our endless mental capabilities, we still cannot go beyond the borders of our bodies. The idea by itself is correct: no matter how long you might imagine and believe that you can lift a car, it’s unlikely you will actually be able to do it. But this notion is used to prove that there is some connection between biology (i.e., our nature and, to a lesser extent, our genitals) and our gender. In reality, such a connection is not real.</p>
+			<p>“To accept the inherent importance of genitals to one’s gender, we need to prove that this position is objective. If not, it’d mean that the interpretation of gender as a correlate of sex will be equally subjective as the interpretation that gender is a personal decision based on the inner feelings of a person. Without such proof, the statement ‘penis makes you a man’ is equal to ‘I consider myself a man no matter my body.’ Disproving the former is easier than proving it. Simone de Beauvoir wrote that a person can only be called weak or strong in the presence of a coordinate system.</p>
+			<p>“If we take a person of any gender and imagine them in a vacuum, then we won’t be able to understand exactly how strong they are. No matter whether that person has a lot of muscles or not, without a relative point of view, it’s impossible to determine their physical strength. But as soon as we make up a certain point – let’s say a person who can lift 20kg is strong, and if less, then weak – it’s very easy to check the strength of any individual. But the border of the ‘20kg rule’ is completely arbitrary; it won’t reflect reality in any way whatsoever. The problem is not in the weight; whether it be 20kg or 100 kg, it doesn’t matter; the problem lies in the fact that there’s no such thing as a ‘strong person’ objectively. We made up the concept of strength and weakness, and it is set in historical and societal contexts, not grounded in some physical law of the universe.</p>
+			<p>“Similarly, men and women, females and males, do not exist. In truth, there are only people with varying biological characteristics. I, for example, have black hair, whereas somebody else might have red hair. Differing genitals are just a deviation from the normal, except in this case, there doesn’t exist such a thing as ‘normal’. And you can see this in nature itself, the very thing that transphobes cling onto so dearly – the existence of hermaphrodites in various species shows that two types of genitals are not the only way. Reproductive organs are the same thing as different colours in the animal kingdom. Intersexuality among humans is another example of our biological diversity. It’s considered an anomaly only because we consider it an anomaly; our perception makes intersex people weird, not their inherent qualities. Humans cannot exist without a relative context. Our society dictates that certain genitals mean certain sex and gender. It is the truth only because we say it is the truth.</p>
+			<p>“Weeks are built on the same principle. Today (at the time of writing, at least) is Friday. But we all understand that that’s not the case because the concept of ‘Fridays’ is imaginary. We, however, take it as truth because, without the idea of Fridays, Thursdays, and weeks, life would be very difficult. I’m not sure exactly how much the world would have changed had we woke up tomorrow not on Saturday and without months, years, and weeks, but I would know that it would have happened not because of some disruption in the space-time continuum but simply because we had rejected that notion. Perhaps humans are not anti-natural, and we can’t deny our biology, but only we can give it meaning. We control exactly what influence and what effects our biology has on us, depending on our perception of it.</p>
+			<p>“To say that ‘gender is a made-up thing’ and that ‘transgenders just imagine they’re of a certain gender; it’s not real’ then we also need to say that, in general, the idea of gender is fiction, just like weeks, societal structures, or families are. If gender is not real (but sex is, somehow), then we will also need to reject every social concept and idea ever. This ‘natural essentialism’ is just a step backwards; we have managed to get to where we are right now only thanks to complex abstract and fictional structures. Economics, society, education, and the sciences – those are just things that humans made up one day; they too are not objectively real. They all live in our heads, and we agree that they are real only because they are useful. We have the ability to change those structures and our understanding of them however we like. It’s necessary to walk away from gender dichotomies and biological essentialism. If we allow ourselves to live according to fictional dates and trade with fictional currency, then I believe we should also allow other people to live ‘fictional’ genders. Transgender women and transgender men are exactly the same as cisgender women and men because all of them are a fabrication of our mind, society, and historical context. They don’t reflect reality, because in reality, almost everything we believe in is, in fact, not real.”</p>
+			<hr>
+			<p>'Friday Evening' was used as the header photograph here and is copyrighted under CC BY-NC license. Non-commercial distribution is allowed with credit to the author. The photograph was found in the <a href="https://lccn.loc.gov/2023696235">Library of Congress</a>.</p>
+			<hr>
+			<h2>ways to contact me</h2>
+			<p>if you want to message me, feel free to do so through <a href="https://letterbird.co/" target="_blank">letterbird.co</a></p>
+			<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
 		</div>
 	</body>
 </html>
