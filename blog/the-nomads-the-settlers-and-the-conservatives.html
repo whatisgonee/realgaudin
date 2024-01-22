@@ -1,140 +1,53 @@
 <!DOCTYPE html>
-
-<html>
+<html lang="en">
 	<head>
-		<title>The Nomads, the Settlers, and the Conservatives</title>
+		<title>the nomads, the settlers, and the conservatives</title>
 
 		<meta charset="UTF8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- For embeds and stuff -->
-		<meta content="The Nomads, the Settlers, and the Conservatives by K. Gaudin" property="og:title">
-		<meta content="Fighting off the swamp of conservatism with critical thinking, progressivism, and the embrace of change." property="og:description">
-		<meta content="https://www.realgaudin.uk/blog/the-nomads-the-settlers-and-the-conservatives.html" property="og:url">
-		<meta content="https://realgaudin.uk/media/kyzkachar.jpg" property="og:image">
-		<meta content="#008080" data-react-helmet="true" name="theme-color">
-
-		<!-- My website uses Bootstrap v. 5.3.2. min. -->
-		<!-- Read more on Bootstrap here: https://getbootstrap.com/ -->
-
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-		<!-- This website uses jQuery v. 3.7.1. min. -->
-		<!-- Read more on jQuery here: https://jquery.com/ -->
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	
-		<!-- Custom script and style files -->
-		<link rel="stylesheet" href="../style.css" type="text/css">
-
-		<!-- Website's Icon -->
-		<link href="../media/Lautrec_Laundress.ico" rel="icon" type="image/x-icon">
-		<script src="../script.js" type="text/javascript"></script>
+		<link href="../media/icon.ico" rel="icon" type="image/x-icon">
+		<link href="../style.css" rel="stylesheet" type="text/css">
 	</head>
-
-	<body onload="load()">
-		<!-- Element for containing desktop icons (links) in the background -->
-		<div class="icons">
-			<figure class="desktop-icon">
-				<img src="../media/recycle_bin_empty-4.png">
-				<figcaption class="desktop-label">Recycle Bin<figcaption>
-			</figure>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/computer_explorer-4.png">
-					<figcaption class="desktop-label">My Computer<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/directory_closed-4.png">
-					<figcaption class="desktop-label">Gallery<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/notepad-2.png">
-					<figcaption class="desktop-label">Blog<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="../media/modem-5.png">
-					<figcaption class="desktop-label">About<figcaption>
-				</figure>
-			</a>
-		</div>
-
-		<!-- Element for containg images, they have absolute position, so the container's position doesn't matter -->
-		<div class="images" id="images"></div>
-
-		<!-- Bootstrap container class with a set width and height -->
-		<!-- My website does not use fluid-container, as I don't want it to take up all the width space -->
-		<div class="container content" id="window">
-			<!-- Bootstrap row class -->
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="../media/computer_explorer-2.png" alt="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc." title="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc.">
-
-					<span>K. Gaudin | <a href="/" title="Home">Home</a> | <a href="/gallery/">Gallery</a> | <a href="/blog/">Blog</a> | <a href="/about.html">About</a></span>
-
-					<a href="javascript:void(0);" onclick="closeWindow()" title="Close window"><img src="../media/close-icon.png" class="icon close"></a>
+	
+	<body>
+		<div id="main" class="container-fluid">
+			<a href="/index.html"><- back<br><br></a>
+			<h1>the nomads, the settlers, and the conservatives</h1>
+			<pre>       .--.           .---.        .-.
+.---|--|   .-.     | A |  .---. |~|    .--.
+.--|===|Ch|---|_|--.__| S |--|:::| |~|-==-|==|---.
+|%%|NT2|oc|===| |~~|%%| C |--|   |_|~|CATS|  |___|-.
+|  |   |ah|===| |==|  | I |  |:::|=| |    |GB|---|=|
+|  |   |ol|   |_|__|  | I |__|   | | |    |  |___| |
+|~~|===|--|===|~|~~|%%|~~~|--|:::|=|~|----|==|---|=|
+^--^---'--^---^-^--^--^---'--^---^-^-^-==-^--^---^-'</pre>
+			<p>26th of December, 2023 | 26.12.2023 | <a href="https://medium.com/@realgaudin/the-nomads-the-settlers-and-the-conservatives-d43743efc048">read on medium</a></p>
+			<hr>
+			<center>
+				<div id="transring">
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-variables.js"></script>
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-widget.js"></script>
 				</div>
-			</div>
-			<div class="row" style="padding:5px">
-				<div class="col-md-3 nopad outer-container" id="sidebar">
-				</div>
-				<div class="col-md-9 nopad outer-container">
-					<div class="inner-container">
-						<h2>The Nomads, the Settlers, and the Conservatives <img class="blog-header" src="../media/kyzkachar.jpg" width="480px" align="left" title="Bieg dievushki (Girl kidnapping), 1865-1872."><div class="caption-label text-left">Bieg dievushki (Girl kidnapping), 1865-1872.</div></h2>
-						<hr>
-						<p><i>26th of December, 2023 | 26.12.2023</i></p>
-						<hr>
-						<p><span class="tab"></span><span class="tab"></span>An excerpt from a fictional political debate in an unspecified country between Ms. A. and conservative representatives.
-						</p>
-						<p><span class="tab"></span><span class="tab"></span>A: “I would like to start by first saying the obvious: banning transgender people from getting basic human healthcare, to which all other citizens have universal access, is, of course, unconstitutional, discriminatory, and violates basic human rights. The International Bill of Human Rights clearly states that no entity, whether political or individual, can violate the human rights laid out in the convention. Access to basic healthcare without discrimination is, according to the same Bill, a human right. Prohibiting transgender people from receiving gender-affirming healthcare, which is freely granted to cisgender counterparts, is, by definition, discriminatory.</p>
-						<p><span class="tab"></span><span class="tab"></span>“I want the general public to understand that, regardless of whether you agree or not with these proposed changes, you have to realize that transgender people are not the only ones who will be affected in the future. In fact, transgender people are simply the beginning of what the conservative party is trying to achieve: preserving, nay, even resurrecting the old status quo, where the white man was the golden standard of society. That is the ultimate meaning and goal of conservatism – they are trying to conserve what was; they aren’t looking at what can be. It is the politics of preserving power for the privileged group, not maintaining ‘traditional values.’ Traditions are simply a cover-up for what these politicians truly want – unlimited privilege, power, influence, and money forever and indefinitely. That is the root of conservatism.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Realising that, regardless of whether you consider transgender people as people of their chosen gender or not, it’s important to keep in mind that they are still people. They are citizens of their country, living, breathing, and walking; they have all the rights that every other cisgender person has. That includes the right to non-discriminatory healthcare and an education system. By saying that you want to take away that freedom, that right, from transgender people simply due to the fact that they are transgender, you admit that you consider yourself in the position of being able to take away the rights of your citizens. What you are fighting against is not the ‘decay’ of society due to its changes; you are not fighting for ‘traditional values’ nor the ‘traditional family’; you are fighting against human rights. You are fighting against the very system that humanity has built through treaties and laws, many of which are simply ignored, in order to preserve the dignity of every person and to keep violence, discrimination, and genocide at bay.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Conservatism doesn’t actually ‘conserve’ the current political state; it doesn’t preserve the ‘latest stable version’ of the world. Conservatism has pickled white supremacy, racism, sexism, homophobia, xenophobia, and everything else that was pretty abundant in the past few centuries. While one part of the system, i.e., progressivism, is trying to push further, exploring the endless possibilities of a better world, conservatism is like a swamp, drowning us deeper into the past. This system is bound to self-destruct. In theory, it might have been a good idea to create two forces that will control each other, one that will strive forward while the other keeps the ‘good’ plans and discards the ‘bad’ ones. Yet currently, conservatism has no way to adapt. Quite frankly, conservatives don’t want to adapt at all.</p>
-						<p><span class="tab"></span><span class="tab"></span>“Let’s imagine a system where there are two sides. Those sides are not political parties per se; instead, they are different ways of thinking. One side, let’s still call it progressivism, is similar to nomads. It never rests, always striving for change, new ideas, and new plans. It explores the vast lands of planet Earth, sets new borders, conquers, and fights. But the progressive nomads don’t settle. The lands they explore are uncultivated; they don’t bear fruit, nor do they feed the livestock. That’s when the settlers come in – the ‘cautionarists.’ Cautionarism, unlike the nomadic progressivists, doesn’t fight with the horse-dwellers. They work together – one explores, the other cultivates. Cautionarists adapt and follow the path that the progressivists pave for them; the plans that are explored come to life in the hands of the hearth carers. Cautionarists look at new ideas not with disgust; they don’t want to go back into the ‘good ol’ days’, but they do look at them with a critical eye. They think and choose and decide. If, say, the nomads explored a swamp and then handed it to the ‘settlers’, those people might turn back. The swamp is not a good place to build a village, so they choose to leave it alone. If, say, the progressivists proposed a plan to decrease the taxes for the rich and handed it to the cautionarists, they’d turn it down too. Not because they dislike change, but because the plan is quite bad.</p>
-						<p><span class="tab"></span><span class="tab"></span>“This system, where the two sides don’t bicker and fight, but discuss topics together, is, in my opinion, fruitful. The ‘idea’ guys create; the ‘down-to-earth’ guys work. That’s not to say that there should be a strict division of labour – people can be both at the same time, which is even better. Being able to put your plans into action while keeping a critical eye on those plans is very important. In short, conservatism is only dragging us behind; it is not about tradition, but instead privilege; it is not about fighting ‘wokeness’, but instead about keeping the power. We should embrace progress but remember that not every change is for the better. We should be modern; we should be able to adapt; but we also should be cautious about our decisions. Rejecting the past is not erasure of traditions; it is overcoming our past mistakes; embracing the modern is not an agenda; it is the only way we can survive, live, and thrive.”</p>
-						<hr>
-						<br>
-						<p><span class="tab"></span><span class="tab"></span>'<i>Bieg dievushki</i>' was used as the header photograph here. No known publication restrictions apply to the photograph; no known author. The photograph was found in the <a href="https://lccn.loc.gov/2002709927" target="_blank">Library of Congress</a>.<p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container notepad">
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="../media/notepad-3.png" alt="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc." title="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc.">
-
-					<span>Info.txt - Notepad</span>
-
-					<img src="../media/close-icon.png" class="icon close" title="Close window">
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 inner-container" style="min-height:190px;max-width:285px">
-					in order to re-open the closed window, simply click on the start icon below at the bottom of the page. alternatively, you can click <a href="javascript:void(0);" onclick="closeWindow()">here</a>.<br>
-					if this page is overflown (too small), please resize it. optimal size is 1872x995px
-				</div>
-			</div>
-		</div>
-
-		<!-- The launch menu from Windows 98 -->
-		<div class="fluid-container bar">
-			<div class="start-button" style="width:60px;height:25px;text-align:center">
-				<a href="javascript:void(0);" onclick="closeWindow()">
-					<img src="../media/start-button.png">
-				</a>
-			</div>
+			</center>
+			<hr>
+			<center><img alt="Black and white photograph of people sitting on horses" title="Bieg dievushki (Girl kidnapping), 1865-1872." src="../media/kyzkachar.jpg" style="margin-bottom:10px;width:100%"><br>Bieg dievushki (Girl kidnapping), 1865-1872.</center>
+			<hr>
+			<p>An excerpt from a fictional political debate in an unspecified country between Ms. A. and conservative representatives. </p>
+			<p>A: “I would like to start by first saying the obvious: banning transgender people from getting basic human healthcare, to which all other citizens have universal access, is, of course, unconstitutional, discriminatory, and violates basic human rights. The International Bill of Human Rights clearly states that no entity, whether political or individual, can violate the human rights laid out in the convention. Access to basic healthcare without discrimination is, according to the same Bill, a human right. Prohibiting transgender people from receiving gender-affirming healthcare, which is freely granted to cisgender counterparts, is, by definition, discriminatory.</p>
+			<p>“I want the general public to understand that, regardless of whether you agree or not with these proposed changes, you have to realize that transgender people are not the only ones who will be affected in the future. In fact, transgender people are simply the beginning of what the conservative party is trying to achieve: preserving, nay, even resurrecting the old status quo, where the white man was the golden standard of society. That is the ultimate meaning and goal of conservatism – they are trying to conserve what was; they aren’t looking at what can be. It is the politics of preserving power for the privileged group, not maintaining ‘traditional values.’ Traditions are simply a cover-up for what these politicians truly want – unlimited privilege, power, influence, and money forever and indefinitely. That is the root of conservatism.</p>
+			<p>“Realising that, regardless of whether you consider transgender people as people of their chosen gender or not, it’s important to keep in mind that they are still people. They are citizens of their country, living, breathing, and walking; they have all the rights that every other cisgender person has. That includes the right to non-discriminatory healthcare and an education system. By saying that you want to take away that freedom, that right, from transgender people simply due to the fact that they are transgender, you admit that you consider yourself in the position of being able to take away the rights of your citizens. What you are fighting against is not the ‘decay’ of society due to its changes; you are not fighting for ‘traditional values’ nor the ‘traditional family’; you are fighting against human rights. You are fighting against the very system that humanity has built through treaties and laws, many of which are simply ignored, in order to preserve the dignity of every person and to keep violence, discrimination, and genocide at bay.</p>
+			<p>“Conservatism doesn’t actually ‘conserve’ the current political state; it doesn’t preserve the ‘latest stable version’ of the world. Conservatism has pickled white supremacy, racism, sexism, homophobia, xenophobia, and everything else that was pretty abundant in the past few centuries. While one part of the system, i.e., progressivism, is trying to push further, exploring the endless possibilities of a better world, conservatism is like a swamp, drowning us deeper into the past. This system is bound to self-destruct. In theory, it might have been a good idea to create two forces that will control each other, one that will strive forward while the other keeps the ‘good’ plans and discards the ‘bad’ ones. Yet currently, conservatism has no way to adapt. Quite frankly, conservatives don’t want to adapt at all.</p>
+			<p>“Let’s imagine a system where there are two sides. Those sides are not political parties per se; instead, they are different ways of thinking. One side, let’s still call it progressivism, is similar to nomads. It never rests, always striving for change, new ideas, and new plans. It explores the vast lands of planet Earth, sets new borders, conquers, and fights. But the progressive nomads don’t settle. The lands they explore are uncultivated; they don’t bear fruit, nor do they feed the livestock. That’s when the settlers come in – the ‘cautionarists.’ Cautionarism, unlike the nomadic progressivists, doesn’t fight with the horse-dwellers. They work together – one explores, the other cultivates. Cautionarists adapt and follow the path that the progressivists pave for them; the plans that are explored come to life in the hands of the hearth carers. Cautionarists look at new ideas not with disgust; they don’t want to go back into the ‘good ol’ days’, but they do look at them with a critical eye. They think and choose and decide. If, say, the nomads explored a swamp and then handed it to the ‘settlers’, those people might turn back. The swamp is not a good place to build a village, so they choose to leave it alone. If, say, the progressivists proposed a plan to decrease the taxes for the rich and handed it to the cautionarists, they’d turn it down too. Not because they dislike change, but because the plan is quite bad.</p>
+			<p>“This system, where the two sides don’t bicker and fight, but discuss topics together, is, in my opinion, fruitful. The ‘idea’ guys create; the ‘down-to-earth’ guys work. That’s not to say that there should be a strict division of labour – people can be both at the same time, which is even better. Being able to put your plans into action while keeping a critical eye on those plans is very important. In short, conservatism is only dragging us behind; it is not about tradition, but instead privilege; it is not about fighting ‘wokeness’, but instead about keeping the power. We should embrace progress but remember that not every change is for the better. We should be modern; we should be able to adapt; but we also should be cautious about our decisions. Rejecting the past is not erasure of traditions; it is overcoming our past mistakes; embracing the modern is not an agenda; it is the only way we can survive, live, and thrive.”</p>
+			<hr>
+			<p>'Bieg dievushki' was used as the header photograph here. No known publication restrictions apply to the photograph; no known author. The photograph was found in the <a href="https://lccn.loc.gov/2002709927">Library of Congress</a>.</p>
+			<hr>
+			<h2>ways to contact me</h2>
+			<p>if you want to message me, feel free to do so through <a href="https://letterbird.co/" target="_blank">letterbird.co</a></p>
+			<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
 		</div>
 	</body>
 </html>

@@ -1,147 +1,62 @@
 <!DOCTYPE html>
-
-<!-- Welcome to the index file of my website -->
-<!-- Notice that the old Windows 98 icons were provided from this site: https://win98icons.alexmeub.com/ -->
-<!-- Alex Meub (creator of the website) does not specify license under which these images are copyright, as they don't own them.
-	If you are a Microsoft associated employee and wish to restrict the use of these images, please contact me directly. -->
-
-<!-- LEGAL NOTICE: 
-	 =============
-	The code on this website that I rightfully own is licensed under CC BY-NC-SA 4.0. (see more here: https://creativecommons.org/licenses/by-nc-sa/4.0/). You are free to re-use, re-purpose, and re-distribute my code in any capicity, excluding commercial purposes, so long as you attribute credit (i.e. provide link to my website and/or specify my name). You must also license your work under the same license (CC BY-NC-SA 4.0.). 
-	
-	Please note that the website contains some content which I do not own (as the example with Microsoft icons above), but I try and tend to use Public Domain content and/or content copyrighted under CC licenses. I provide credit where credit is due and necessary.
--->
-
-<html>
+<html lang="en">
 	<head>
-		<title>feralcat</title>
+		<title>gaudin</title>
 
 		<meta charset="UTF8">
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<!-- For embeds and stuff -->
-		<meta content="realGaudin" property="og:title">
-		<meta content="K. Gaudin, writer, web designer, nothing-doer, web-revivalist, queer. Clinically online." property="og:description">
-		<meta content="https://www.realgaudin.uk/gallery" property="og:url">
-		<meta content="https://realgaudin.uk/media/calanque_des_antibois.jpg" property="og:image">
-		<meta content="#008080" data-react-helmet="true" name="theme-color">
-
-		<!-- My website uses Bootstrap v. 5.3.2. min. -->
-		<!-- Read more on Bootstrap here: https://getbootstrap.com/ -->
-
 		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
 
-		<!-- This website uses jQuery v. 3.7.1. min. -->
-		<!-- Read more on jQuery here: https://jquery.com/ -->
-		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-	
-		<!-- Custom script and style files -->
-		<link rel="stylesheet" href="style.css" type="text/css">
-
-		<!-- Website's Icon -->
-		<link href="media/Lautrec_Laundress.ico" rel="icon" type="image/x-icon">
-		<script src="script.js" type="text/javascript"></script>
+		<link href="media/icon.ico" rel="icon" type="image/x-icon">
+		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="script.js"></script>
 	</head>
-
+	
 	<body onload="load()">
-		<!-- Element for containing desktop icons (links) in the background -->
-		<div class="icons">
-			<figure class="desktop-icon">
-				<img src="./media/recycle_bin_empty-4.png">
-				<figcaption class="desktop-label">Recycle Bin<figcaption>
-			</figure>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="./media/computer_explorer-4.png">
-					<figcaption class="desktop-label">My Computer<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="./media/directory_closed-4.png">
-					<figcaption class="desktop-label">Gallery<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="./media/notepad-2.png">
-					<figcaption class="desktop-label">Blog<figcaption>
-				</figure>
-			</a>
-			<a href="/">
-				<figure class="desktop-icon">
-					<img src="./media/modem-5.png">
-					<figcaption class="desktop-label">About<figcaption>
-				</figure>
-			</a>
-		</div>
-
-		<!-- Element for containg images, they have absolute position, so the container's position doesn't matter -->
-		<div class="images" id="images">
-		</div>
-
-		<!-- Bootstrap container class with a set width and height -->
-		<!-- My website does not use fluid-container, as I don't want it to take up all the width space -->
-		<div class="container content" id="window">
-			<!-- Bootstrap row class -->
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="./media/computer_explorer-2.png" alt="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc." title="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc.">
-
-					<span>K. Gaudin | <a href="/" title="Home">Home</a> | <a href="/gallery/">Gallery</a> | <a href="/blog/">Blog</a> | <a href="/about.html">About</a></span>
-
-					<a href="javascript:void(0);" onclick="closeWindow()" title="Close window"><img src="./media/close-icon.png" class="icon close"></a>
+		<div id="main" class="container-fluid">
+			<h1>my personal internet corner</h1>
+			<pre>.             .        .     .     |--|--|--|--|--|--|  |===|==|   /    i
+        .            ______________|__|__|__|__|__|_ |  |===|==|  *  . /=\
+__ *            .   /______________________________|-|  |===|==|       |=|  .
+__|  .      .   .  //______________________________| :----------------------.
+__|   /|\      _|_|//       ooooooooooooooooooooo  |-|                      |
+__|  |/|\|__   ||l|/,-------8                   8 -| | > Free thoughts      |
+__|._|/|\|||.l |[=|/,-------8 NICE AND COZY     8 -|-| > Bed & Breakfast    |
+__|[+|-|-||||li|[=|---------8   <span id="internet">INTERNET</span> <span id="corner">CORNER</span> 8 -| | > No charges, no fee |
+_-----.|/| //:\_[=|\`-------8                   8 -|-| > Reclaiming         |
+ /|  /||//8/ :  8_|\`------ 8ooooooooooooooooooo8 -| | corporate internet   |
+/=| //||/ |  .  | |\\_____________  ____  _________|-|                      |
+==|//||  /   .   \ \\_____________ |X|  | _________| `---==------------==---'
+==| ||  /         \ \_____________ |X| \| _________|     ||            ||
+==| |~ /     .     \
+LS|/  /             \______________________________________________________</pre>
+			<p>hello. nice to meet you. this is my personal page! my online handle is feral cat or k. gaudin, hence the website's url. i will post whatever comes into my head here.</p>
+			<hr>
+			<center>
+				<div id="transring">
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-variables.js"></script>
+					<script type="text/javascript" src="https://transring.neocities.org/onionring-widget.js"></script>
 				</div>
-			</div>
-			<div class="row" style="padding:5px">
-				<div class="col-md-3 nopad outer-container" id="sidebar">
-				</div>
-				<div class="col-md-9 nopad outer-container">
-					<div class="inner-container">
-						<h2>Welcome to Gaudin's Corner<img src="./media/Lautrec_Laundress.jpg" width="430px" align="right" title="La Blanchisseuse, 1886, Henri de Tolouse-Lautrec."><div class="caption-label text-right">La Blanchisseuse, 1886, Henri de Tolouse-Lautrec.</div></h2>
-						<hr>
-						<p><span class="tab"></span><span class="tab"></span>Carmen Gaudin was a French sex worker in the 19th century. The reason why she remains a relatively famous person till this day is because of Henri de Tolouse-Lautrec – a French painter and artist, who was at the time fascinated by Gaudin. Henri had painted a dozen of paintings featuring Carmen Gaudin, many of which are now on display in the <a href="https://www.nga.gov/" target="_blank">National Gallery of Art</a>.</p>
-						<p><span class="tab"></span><span class="tab"></span>I have taken the surname of Carmen for no particular reason – I simply like her portraits and the way her surname sounds. In addition, it is a relatively uncommon surname, as far as I'm concerned.</p>
-						<p><span class="tab"></span><span class="tab"></span>In any ways, welcome to my piece of the Internet pie. This is a website where I post various things – from my unfinished projects to articles and essays on topics I find interesting. On your left side you can see a navigation bar. Click on any of the links or chat with my robotic creation below.</p>
-						<hr>
-						<h3>What is Gallery?</h3>
-						<hr>
-						<p><span class="tab"></span><span class="tab"></span>Gallery is a part of my website dedicated to other people's art. Usually, it's some classical stuff which I find interesting or consider those paintings to be my favourites. All art in the Gallery section of the website is in Public Domain or re-uploaded with direct permission of the artist. Paintings which you might find in the gallery is like the one above! My most favourite ones are visible on home screen of the website, you can see them by closing this window (click the 'x' button above or <a href="javascript:void(0);" onclick="closeWindow()">here</a>).</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="container notepad">
-			<div class="row header">
-				<!-- This is the header row and it takes up all the columns -->
-				<div class="col-md-12">
-					<!-- This is the icon image (website design is built around 90s PCs) -->
-					<img class="icon" src="./media/notepad-3.png" alt="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc." title="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc.">
-
-					<span>Info.txt - Notepad</span>
-
-					<img src="./media/close-icon.png" class="icon close" title="Close window">
-				</div>
-			</div>
-
-			<div class="row">
-				<div class="col-md-12 inner-container" style="min-height:190px;max-width:285px">
-					in order to re-open the closed window, simply click on the start icon below at the bottom of the page. alternatively, you can click <a href="javascript:void(0);" onclick="closeWindow()">here</a>.<br>
-					if this page is overflown (too small), please resize it. optimal size is 1872x995px
-				</div>
-			</div>
-		</div>
-
-		<!-- The launch menu from Windows 98 -->
-		<div class="fluid-container bar">
-			<div class="start-button" style="width:60px;height:25px;text-align:center">
-				<a href="javascript:void(0);" onclick="closeWindow()">
-					<img src="./media/start-button.png">
-				</a>
-			</div>
+			</center>
+			<hr>
+			<h2>about me</h2>
+			<p>> carmen gaudin was a french sex worker in the 19th century who was painted in quite a lot of Lautrec's paintings. you can find them online in public domain, if you are curious.<br><br>
+				> my website has gone through a lot of designs, but its purpose remains the same - whatever i want it to be. it was created as part of a larger movement of web-revival.<br><br>
+				> i am, and always will be, queer, so if you do not like something about queer people, you can simply close this website.</p>
+			<hr>
+			<h2>my blog</h2>
+			<p>here are my posts:</p>
+			<ul>
+				<li><a href="/blog/moving-away-from-youtube.html">moving away from youtube</a> 22.01.24</li>
+				<li><a href="/blog/the-nomads-the-settlers-and-the-conservatives.html">the nomads, the settler, and the conservatives</a> 26.12.23</li>
+				<li><a href="/blog/fridays-do-not-exist.html">fridays do not exist</a> 16.12.23</li>
+			</ul>
+			<p>you can also find my blog on <a href="https://medium.com/@realgaudin" target="_blank">medium.com/@realgaudin</a></p>
+			<hr>
+			<h2>ways to contact me</h2>
+			<p>if you want to message me, feel free to do so through <a href="https://letterbird.co/" target="_blank">letterbird.co</a></p>
+			<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
 		</div>
 	</body>
 </html>
