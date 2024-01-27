@@ -18,7 +18,8 @@ body {
 	filter: blur(30px);
 	transform: scale(2);
 	animation-name: wiggle;
-	animation-duration: 30s;
+	animation-duration: 60s;
+	opacity: 15%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
@@ -28,7 +29,6 @@ body {
 	top: -10vw;
 	height: 22vw;
 	width: 22vw;
-	opacity: 30%;
 	background-color: #460680;
 	animation-direction: reverse;
 }
@@ -38,7 +38,6 @@ body {
 	bottom: 12vw;
 	height: 30vw;
 	width: 30vw;
-	opacity: 30%;
 	background-color: #1f0954;
 	animation-delay: 3s;
 }
@@ -48,7 +47,6 @@ body {
 	bottom: 0vw;
 	height: 20vw;
 	width: 20vw;
-	opacity: 30%;
 	background-color: #230f73;
 	animation-delay: 1.5s;
 }
