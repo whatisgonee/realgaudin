@@ -5,6 +5,80 @@ body {
 	width: 100%;
 }
 
+#circles {
+	position: fixed;
+	height: 100%;
+	width: 100vw;
+	z-index: -1;
+}
+
+.circle {
+	position: absolute;
+	border-radius: 50%;
+	filter: blur(30px);
+	transform: scale(2);
+	animation-name: wiggle;
+	animation-duration: 30s;
+	animation-iteration-count: infinite;
+	animation-timing-function: linear;
+}
+
+.size-2 {
+	left: 10vw;
+	top: -10vw;
+	height: 22vw;
+	width: 22vw;
+	opacity: 30%;
+	background-color: #460680;
+	animation-direction: reverse;
+}
+
+.size-1 {
+	right: 23vw;
+	bottom: 12vw;
+	height: 30vw;
+	width: 30vw;
+	opacity: 30%;
+	background-color: #1f0954;
+	animation-delay: 3s;
+}
+
+.size-3 {
+	left: 0vw;
+	bottom: 0vw;
+	height: 20vw;
+	width: 20vw;
+	opacity: 30%;
+	background-color: #230f73;
+	animation-delay: 1.5s;
+}
+
+@keyframes wiggle {
+	0% {
+		transform: translate(0, 0) scale(2);
+	}
+
+	20% {
+		transform: translate(20vw, 10vw) scale(2);
+	}
+
+	40% {
+		transform: translate(0vw, 30vw) scale(2);
+	}
+
+	60% {
+		transform: translate(-30vw, 50vw) scale(2);
+	}
+
+	80% {
+		transform: translate(-10vw, 20vw) scale(2);
+	}
+
+	100% {
+		transform: translate(0, 0) scale(2);
+	}
+}
+
 #main {
 	width: 40%;
 	padding: 30px;
