@@ -18,8 +18,8 @@ body {
 	filter: blur(30px);
 	transform: scale(2);
 	animation-name: wiggle;
-	animation-duration: 60s;
-	opacity: 15%;
+	animation-duration: 40s;
+	opacity: 30%;
 	animation-iteration-count: infinite;
 	animation-timing-function: linear;
 }
