@@ -3,6 +3,7 @@ body {
 	color: white;
 	font-family: monospace;
 	width: 100%;
+	image-rendering: pixelated;
 }
 
 #circles {
@@ -80,10 +81,20 @@ body {
 #main {
 	width: 40%;
 	padding: 30px;
+	position: relative;
+	z-index:2;
 }
 
 @media (max-width:800px)  {
 	#main {
 		width: 100%;
+	}
+
+	#field-1 {
+		display: none;
+	}
+
+	#field-2 {
+		display: none;
 	}
 }
