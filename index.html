@@ -10,6 +10,7 @@
 
 		<link href="media/icon.ico" rel="icon" type="image/x-icon">
 		<link href="style.css" rel="stylesheet" type="text/css">
+		<script src="matter.js"></script>
 		<script src="script.js"></script>
 	</head>
 	
@@ -20,6 +21,10 @@
 			<div class="circle size-1"></div>
 			<div class="circle size-3" style="left:20vw;bottom:30vw;animation-delay: 0.75s;"></div>
 			<div class="circle size-2" style="left:40vw;top:-20vw;animation-direction: normal;animation-delay: 4s;"></div>
+		</div>
+		<div class="container-fluid" style="position:fixed;left:0;height:100%;z-index:0;" id="field-1">
+			<a href="javascript:void(0);" onclick="stop()" style="position: fixed;top:10px;display:none" id="end">Stop this.</a>
+			<canvas id="canvas-1"></canvas>
 		</div>
 		<div id="main" class="container-fluid">
 			<h1>my personal internet corner</h1>
@@ -48,9 +53,13 @@ LS|/  /             \______________________________________________________</pre
 			</center>
 			<hr>
 			<h2>about me</h2>
-			<p>> carmen gaudin was a french sex worker in the 19th century who was painted in quite a lot of Lautrec's paintings. you can find them online in public domain, if you are curious.<br><br>
+			<p>> i post my thoughts, essays, and art here.<br><br>
 				> my website has gone through a lot of designs, but its purpose remains the same - whatever i want it to be. it was created as part of a larger movement of web-revival.<br><br>
-				> i am, and always will be, queer, so if you do not like something about queer people, you can simply close this website.</p>
+				> i am, and always will be, queer, so if you do not like something about queer people, you can simply close this website.<br><br>
+				> she/her transgender <img src="media/tranny.png" width="30px"></p>
+			<hr>
+			<h2>blinkies</h2>
+			<center><img src="media/feralbutton.gif"> | <a href="https://www.tumblr.com/xumoonhao/740278073095782400?source=share"><img src="media/palestine.gif"></a> | <a href="javascript:void(0);" onclick="possums()"><img src="media/possums.gif"></a></center>
 			<hr>
 			<h2>my blog</h2>
 			<p>here are my posts:</p>
@@ -67,4 +76,104 @@ LS|/  /             \______________________________________________________</pre
 			<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
 		</div>
 	</body>
+
+	<script>
+		// get the elements where we are going to render possums
+		var field1 = document.getElementById("field-1");
+
+		// make sure the user is not on mobile (we won't render possums if the user is on mobile)
+		var isOnMobile = false;
+
+		// get their height
+		var height = Math.floor(field1.getBoundingClientRect().height);
+		var width = Math.floor(field1.getBoundingClientRect().width);
+		
+		if(height == 0) {
+			isOnMobile = true;
+		}
+
+		field1.style.display = "none";
+
+		// uses matter.js https://github.com/liabru/matter-js
+
+		// create engines
+		var Engine = Matter.Engine,
+			Render = Matter.Render,
+			Runner = Matter.Runner,
+			Bodies = Matter.Bodies,
+			Composite = Matter.Composite,
+			MouseConstraint = Matter.MouseConstraint,
+        	Mouse = Matter.Mouse;
+
+		var engine = Engine.create();
+		engine.gravity.y = 0.5;
+
+		// create renderers
+		var render = Render.create({element: field1, engine: engine, canvas:document.getElementById("canvas-1"), options: {width: width, height: height, wireframes: false, background: "transparent", showBounds:true} });
+
+		// add mouse control
+		var mouse = Mouse.create(render.canvas),
+			mouseConstraint = MouseConstraint.create(engine, {
+				mouse: mouse,
+				constraint: {
+					stiffness: 0.2,
+					render: {
+						visible: false
+					}
+				}
+			});
+
+		// keep the mouse in sync with rendering
+		render.mouse = mouse;
+
+		var ground = Bodies.rectangle(0, height, width*2, 5, { isStatic: true });
+		var wallLeft = Bodies.rectangle(0, 0, 5, height*2, { isStatic: true });
+		var wallRight = Bodies.rectangle(width, 0, 5, height*2, { isStatic: true });
+		var ceiling = Bodies.rectangle(0, 0, width*2, 5, { isStatic: true });
+
+		ground.render.opacity = 0;
+		wallRight.render.opacity = 0;
+		wallLeft.render.opacity = 0;
+		ceiling.render.opacity = 0;
+
+		Composite.add(engine.world, [ground, wallRight, wallLeft, mouseConstraint]);
+
+		Render.run(render);
+
+		var runner = Runner.create();
+		Runner.run(runner, engine);
+
+		function possums() {
+			if(isOnMobile) {
+				return;
+			}
+			field1.style.display = "inherit";
+			document.getElementById("end").style.display = "inherit";
+			for(let i = 0; i < Math.floor(Math.random() * 12 + 7); i++) {
+				let radius = Math.floor(Math.random() * 80 + 50);
+				let ratio = radius*2/400;
+				console.log(radius, ratio, radius/400)
+
+				// create the body for our possum
+				let possum = Bodies.circle(Math.floor(Math.random() * (width-30)), -Math.floor(Math.random() * 400 + 150), radius);
+
+				// add the sprite and adjust it to the body's size
+				possum.render.sprite.texture = "media/possum.png";
+				possum.render.sprite.xScale = ratio;
+				possum.render.sprite.yScale = ratio;
+
+				Composite.add(engine.world, possum);
+			}
+		}
+
+		function stop() {
+			field1.style.display = "none";
+			Runner.stop(runner);
+			Render.stop(render);
+			let canvas = document.getElementById("canvas-1");
+			let context = canvas.getContext('2d');
+			context.clearRect(0, 0, canvas.width, canvas.height);
+			document.getElementById("end").style.display = "none";
+		}
+	</script>
 </html>
