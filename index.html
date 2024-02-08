@@ -15,65 +15,81 @@
 	</head>
 	
 	<body onload="load()">
+		<div class="background"></div>
+		<div class="background-gradient"></div>
 		<div id="circles">
-			<div class="circle size-2"></div>
-			<div class="circle size-3"></div>
 			<div class="circle size-1"></div>
-			<div class="circle size-3" style="left:20vw;bottom:30vw;animation-delay: 0.75s;"></div>
-			<div class="circle size-2" style="left:40vw;top:-20vw;animation-direction: normal;animation-delay: 4s;"></div>
+			<div class="circle size-3"></div>
+			<div class="circle size-2"></div>
 		</div>
 		<div class="container-fluid" style="position:fixed;left:0;height:100%;z-index:0;" id="field-1">
 			<a href="javascript:void(0);" onclick="stop()" style="position: fixed;top:10px;display:none" id="end">Stop this.</a>
 			<canvas id="canvas-1"></canvas>
 		</div>
-		<div id="main" class="container-fluid">
-			<h1>my personal internet corner</h1>
-			<pre>.             .        .     .     |--|--|--|--|--|--|  |===|==|   /    i
-        .            ______________|__|__|__|__|__|_ |  |===|==|  *  . /=\
-__ *            .   /______________________________|-|  |===|==|       |=|  .
-__|  .      .   .  //______________________________| :----------------------.
-__|   /|\      _|_|//       ooooooooooooooooooooo  |-|                      |
-__|  |/|\|__   ||l|/,-------8                   8 -| | > Free thoughts      |
-__|._|/|\|||.l |[=|/,-------8 NICE AND COZY     8 -|-| > Bed & Breakfast    |
-__|[+|-|-||||li|[=|---------8   <span id="internet">INTERNET</span> <span id="corner">CORNER</span> 8 -| | > No charges, no fee |
-_-----.|/| //:\_[=|\`-------8                   8 -|-| > Reclaiming         |
- /|  /||//8/ :  8_|\`------ 8ooooooooooooooooooo8 -| | corporate internet   |
-/=| //||/ |  .  | |\\_____________  ____  _________|-|                      |
-==|//||  /   .   \ \\_____________ |X|  | _________| `---==------------==---'
-==| ||  /         \ \_____________ |X| \| _________|     ||            ||
-==| |~ /     .     \
-LS|/  /             \______________________________________________________</pre>
-			<p>hello. nice to meet you. this is my personal page! my online handle is feral cat or k. gaudin, hence the website's url. i will post whatever comes into my head here.</p>
-			<hr>
-			<center>
-				<div id="transring">
-					<script type="text/javascript" src="https://transring.neocities.org/onionring-variables.js"></script>
-					<script type="text/javascript" src="https://transring.neocities.org/onionring-widget.js"></script>
+		<div class="main-container">
+			<div class="blinkies">
+				<div class="bar">my blinkies</div>
+				<div class="container">
+					<a href="javascript:void(0);" onclick="possums()"><img src="media/possums.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/femmefatale.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/gayisgood.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/isopod.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/macandcheese.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/tranny.gif"></a>
+					<a href="https://www.tumblr.com/radiotrophicfungi"><img src="media/translives.gif"></a>
+					<img src="media/feralbutton.gif" class="blinky">
+					<a href="https://www.tumblr.com/xumoonhao/740278073095782400?source=share"><img src="media/palestine.gif"></a>
 				</div>
-			</center>
-			<hr>
-			<h2>about me</h2>
-			<p>> i post my thoughts, essays, and art here.<br><br>
-				> my website has gone through a lot of designs, but its purpose remains the same - whatever i want it to be. it was created as part of a larger movement of web-revival.<br><br>
-				> i am, and always will be, queer, so if you do not like something about queer people, you can simply close this website.<br><br>
-				> she/her transgender <img src="media/tranny.png" width="30px"></p>
-			<hr>
-			<h2>blinkies</h2>
-			<center><img src="media/feralbutton.gif"> | <a href="https://www.tumblr.com/xumoonhao/740278073095782400?source=share"><img src="media/palestine.gif"></a> | <a href="javascript:void(0);" onclick="possums()"><img src="media/possums.gif"></a></center>
-			<hr>
-			<h2>my blog</h2>
-			<p>here are my posts:</p>
-			<ul>
-				<li><a href="/blog/how-i-feel-about-my-new-name.html">how i feel about my new name</a> 24.01.24</li>
-				<li><a href="/blog/moving-away-from-youtube.html">moving away from youtube</a> 22.01.24</li>
-				<li><a href="/blog/the-nomads-the-settlers-and-the-conservatives.html">the nomads, the settlers, and the conservatives</a> 26.12.23</li>
-				<li><a href="/blog/fridays-do-not-exist.html">fridays do not exist</a> 16.12.23</li>
-			</ul>
-			<p>you can also find my blog on <a href="https://medium.com/@realgaudin" target="_blank">medium.com/@realgaudin</a></p>
-			<hr>
-			<h2>ways to contact me</h2>
-			<p>if you want to message me, feel free to do so through <a href="https://letterbird.co/" target="_blank">letterbird.co</a></p>
-			<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
+			</div>
+			<div id="main" class="container-fluid">
+				<h1>my personal internet corner</h1>
+				<pre>.             .        .     .     |--|--|--|--|--|--|  |===|==|   /    i
+	        .            ______________|__|__|__|__|__|_ |  |===|==|  *  . /=\
+	__ *            .   /______________________________|-|  |===|==|       |=|  .
+	__|  .      .   .  //______________________________| :----------------------.
+	__|   /|\      _|_|//       ooooooooooooooooooooo  |-|                      |
+	__|  |/|\|__   ||l|/,-------8                   8 -| | > Free thoughts      |
+	__|._|/|\|||.l |[=|/,-------8 NICE AND COZY     8 -|-| > Bed & Breakfast    |
+	__|[+|-|-||||li|[=|---------8   <span id="internet">INTERNET</span> <span id="corner">CORNER</span> 8 -| | > No charges, no fee |
+	_-----.|/| //:\_[=|\`-------8                   8 -|-| > Reclaiming         |
+	 /|  /||//8/ :  8_|\`------ 8ooooooooooooooooooo8 -| | corporate internet   |
+	/=| //||/ |  .  | |\\_____________  ____  _________|-|                      |
+	==|//||  /   .   \ \\_____________ |X|  | _________| `---==------------==---'
+	==| ||  /         \ \_____________ |X| \| _________|     ||            ||
+	==| |~ /     .     \
+	LS|/  /             \______________________________________________________</pre>
+				<p>hello. nice to meet you. this is my personal page! my online handle is feral cat or k. gaudin, hence the website's url. i will post whatever comes into my head here.</p>
+				<hr>
+				<center>
+					<div id="transring">
+						<script type="text/javascript" src="https://transring.neocities.org/onionring-variables.js"></script>
+						<script type="text/javascript" src="https://transring.neocities.org/onionring-widget.js"></script>
+					</div>
+				</center>
+				<hr>
+				<h2>about me</h2>
+				<p>> i post my thoughts, essays, and art here.<br><br>
+					> my website has gone through a lot of designs, but its purpose remains the same - whatever i want it to be. it was created as part of a larger movement of web-revival.<br><br>
+					> i am, and always will be, queer, so if you do not like something about queer people, you can simply close this website.<br><br>
+					> she/her transgender <img src="media/tranny.png" width="30px"></p>
+				<hr>
+				<h2>blinkies</h2>
+				<center></center>
+				<hr>
+				<h2>my blog</h2>
+				<p>here are my posts:</p>
+				<ul>
+					<li><a href="/blog/how-i-feel-about-my-new-name.html">how i feel about my new name</a> 24.01.24</li>
+					<li><a href="/blog/moving-away-from-youtube.html">moving away from youtube</a> 22.01.24</li>
+					<li><a href="/blog/the-nomads-the-settlers-and-the-conservatives.html">the nomads, the settlers, and the conservatives</a> 26.12.23</li>
+					<li><a href="/blog/fridays-do-not-exist.html">fridays do not exist</a> 16.12.23</li>
+				</ul>
+				<p>you can also find my blog on <a href="https://medium.com/@realgaudin" target="_blank">medium.com/@realgaudin</a></p>
+				<hr>
+				<h2>ways to contact me</h2>
+				<p>if you want to message me, feel free to do so through <a href="https://letterbird.co/" target="_blank">letterbird.co</a></p>
+				<script data-letterbirduser="realgaudin" src="https://letterbird.co/embed/v1.js"></script>
+			</div>
 		</div>
 	</body>
 
