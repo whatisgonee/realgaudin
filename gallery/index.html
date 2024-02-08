@@ -1,0 +1,166 @@
+<html>
+	<head>
+		<title>Gallery</title>
+
+		<meta charset="UTF8">
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<!-- For embeds and stuff -->
+		<meta content="realGaudin" property="og:title">
+		<meta content="K. Gaudin, writer, web designer, nothing-doer, web-revivalist, queer. Clinically online." property="og:description">
+		<meta content="https://www.realgaudin.uk/gallery" property="og:url">
+		<meta content="https://realgaudin.uk/media/calanque_des_antibois.jpg" property="og:image">
+		<meta content="#008080" data-react-helmet="true" name="theme-color">
+
+		<!-- My website uses Bootstrap v. 5.3.2. min. -->
+		<!-- Read more on Bootstrap here: https://getbootstrap.com/ -->
+
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+		<!-- This website uses jQuery v. 3.7.1. min. -->
+		<!-- Read more on jQuery here: https://jquery.com/ -->
+		<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+	
+		<!-- Custom script and style files -->
+		<link rel="stylesheet" href="../style.css" type="text/css">
+
+		<!-- Website's Icon -->
+		<link href="../media/Lautrec_Laundress.ico" rel="icon" type="image/x-icon">
+		<script src="../script.js" type="text/javascript"></script>
+	</head>
+
+	<body onload="load()">
+		<!-- Element for containing desktop icons (links) in the background -->
+		<div class="icons">
+			<figure class="desktop-icon">
+				<img src="../media/recycle_bin_empty-4.png">
+				<figcaption class="desktop-label">Recycle Bin<figcaption>
+			</figure>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/computer_explorer-4.png">
+					<figcaption class="desktop-label">My Computer<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/directory_closed-4.png">
+					<figcaption class="desktop-label">Gallery<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/notepad-2.png">
+					<figcaption class="desktop-label">Blog<figcaption>
+				</figure>
+			</a>
+			<a href="/">
+				<figure class="desktop-icon">
+					<img src="../media/modem-5.png">
+					<figcaption class="desktop-label">About<figcaption>
+				</figure>
+			</a>
+		</div>
+
+		<!-- Element for containg images, they have absolute position, so the container's position doesn't matter -->
+		<div class="images" id="images">
+		</div>
+
+		<!-- Bootstrap container class with a set width and height -->
+		<!-- My website does not use fluid-container, as I don't want it to take up all the width space -->
+		<div class="container content" id="window">
+			<!-- Bootstrap row class -->
+			<div class="row header">
+				<!-- This is the header row and it takes up all the columns -->
+				<div class="col-md-12">
+					<!-- This is the icon image (website design is built around 90s PCs) -->
+					<img class="icon" src="../media/computer_explorer-2.png" alt="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc." title="A windows 98 icon of a computer with the iconic teal background and two windows overlaying each other opened on the desk. Copyright to Microsoft Inc.">
+
+					<span>K. Gaudin | <a href="/" title="Home">Home</a> | <a href="/gallery/">Gallery</a> | <a href="/blog/">Blog</a> | <a href="/about.html">About</a></span>
+
+					<a href="javascript:void(0);" onclick="closeWindow()" title="Close window"><img src="../media/close-icon.png" class="icon close"></a>
+				</div>
+			</div>
+			<div class="row" style="padding:5px">
+				<div class="col-md-3 nopad outer-container" id="sidebar">
+				</div>
+				<div class="col-md-9 nopad outer-container">
+					<div class="inner-container">
+						<h2>Welcome to Gallery</h2>
+						<hr>
+						<p><span class="tab"></span><span class="tab"></span>You can see every painting that is saved on this website below! All of them are in Public Domain, meaning that you can use and re-use them for any purpose.</p>
+						<hr>
+						<div class="gallery-showcase">
+							<figure style="width:330px;">
+								<img src="../media/Lautrec_Laundress.jpg" width="330px" alt="A painting from a French artist Henri Lautrec depicting a woman in a white shirt looking out the window. She is turned sideways and we can't see her face. She has red hair. Public Domain, Wikimedia Commons." title="A painting from a French artist Henri Lautrec depicting a woman in a white shirt looking out the window. She is turned sideways and we can't see her face. She has red hair. Public Domain, Wikimedia Commons.">
+
+								<figcaption>La Blanchisseuse, 1886, Henri de Tolouse-Lautrec.</figcaption>
+							</figure>
+							<figure style="width:330px;">
+								<img src="../media/carmen_gaudin.jpg" width="330px" alt="A painting from a French artist Henri Lautrec depicting a woman in a black dress sitting straight. Her head is turned to the right and we can't see her face well. She has pink-ish, red-ish short cut hair. Public Domain, NGA.gov." title="A painting from a French artist Henri Lautrec depicting a woman in a black dress sitting straight. Her head is turned to the right and we can't see her face well. She has pink-ish, red-ish short cut hair. Public Domain, NGA.gov.">
+
+								<figcaption>Carmen Gaudin, 1885, Henri de Tolouse-Lautrec.</figcaption>
+							</figure>
+							<figure style="width:450px;">
+								<img src="../media/calanque_des_antibois.jpg" width="450px" alt="A painting from Henri Edmond Cross depicting a scenery of beach at a lake or sea. The beach starts on the right side with sand and then turns into rocks closer to the middle of the painting. There's a small wooden boat on shore at the bottom of the painting, as well as another near a wooden pier. Public Domain, NGA.gov." title="A painting from Henri Edmond Cross depicting a scenery of beach at a lake or sea. The beach starts on the right side with sand and then turns into rocks closer to the middle of the painting. There's a small wooden boat on shore at the bottom of the painting, as well as another near a wooden pier. Public Domain, NGA.gov.">
+
+								<figcaption>Calanque des Antibois, 1881/1882, Henri Edmond Cross.</figcaption>
+							</figure>
+							<figure style="width:450px;">
+								<img src="../media/venice.jpg" width="450px" alt="A painting from Henri Edmond Cross depicting a scenery of Venice. There's a big church in the background, a stoney river bank on the right of the painting and an open, an aquamarine sea on the left side. In the distance you can see sailing boats. Public Domain, NGA.gov." title="A painting from Henri Edmond Cross depicting a scenery of Venice. There's a big church in the background, a stoney river bank on the right of the painting and an open, an aquamarine sea on the left side. In the distance you can see sailing boats. Public Domain, NGA.gov.">
+
+								<figcaption>Venice, c. 1903, Henri Edmond Cross.</figcaption>
+							</figure>
+							<figure style="width:500px">
+								<img src="../media/murder_scene.jpg" width="500px" alt="A wood engraving in red on wove paper depicting a man swinging a club at two other lying men in a cave of some sort. Public Domain, NGA.gov." title="A wood engraving in red on wove paper depicting a man swinging a club at two other lying men in a cave of some sort. Public Domain, NGA.gov.">
+								<figcaption>Murder Scene, Thomas Bewick.</figcaption>
+							</figure>
+							<figure style="width:300px">
+								<img src="../media/wisdom_gazing_at_a_serpent.jpg" width="300px" alt="A bronze circular cast with an engraved picture depicting the goddess of wisdom holding a serpent in her hands. The woman is staring directly at the snake. Public Domain, NGA.gov." title="A bronze circular cast with an engraved picture depicting the goddess of wisdom holding a serpent in her hands. The woman is staring directly at the snake. Public Domain, NGA.gov.">
+								<figcaption>Wisdom Gazing at a Serpent, c. 1500, Unknown.</figcaption>
+							</figure>
+							<figures style="width:380px">
+								<img src="../media/the_smiling_girl.jpg" width="380px" alt="A 1920s painting from an unknown artist depicting a young woman. She is standing sideways with her face turned to the viewer. On her head she has a long turban/headwear, there is an earring in her left ear. The girl is smiling at the viewer. Public Domain, NGA.gov." title="A 1920s painting from an unknown artist depicting a young woman. She is standing sideways with her face turned to the viewer. On her head she has a long turban/headwear, there is an earring in her left ear. The girl is smiling at the viewer. Public Domain, NGA.gov.">
+								<figcaption>The Smiling Girl, c. 1925, Imitator of Johannes Vermeer.</figcaption>
+							</figure>
+							<figures style="width:380px">
+								<img src="../media/liseuse_a_la_lampe.jpg" width="380px" alt="An 1880s drawing by Félix-Hilaire Buhot depicting a woman in a dark room lit only by a gas lamp reading a book. The woman has turned her back towards the viewer. The only thing we can see are the woman, the table, her book, and the lamp. Public Domain, NGA.gov." title="An 1880s drawing by Félix-Hilaire Buhot depicting a woman in a dark room lit only by a gas lamp reading a book. The woman has turned her back towards the viewer. The only thing we can see are the woman, the table, her book, and the lamp. Public Domain, NGA.gov.">
+								<figcaption>Liseuse a la Lampe (Woman Reading by Lamplight), 1879, Félix-Hilaire Buhot.</figcaption>
+							</figure>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="container notepad">
+			<div class="row header">
+				<!-- This is the header row and it takes up all the columns -->
+				<div class="col-md-12">
+					<!-- This is the icon image (website design is built around 90s PCs) -->
+					<img class="icon" src="../media/notepad-3.png" alt="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc." title="A windows 98 icon of a slightly open lightblue notepad. Copyright to Microsoft Inc.">
+
+					<span>Info.txt - Notepad</span>
+
+					<img src="../media/close-icon.png" class="icon close" title="Close window">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 inner-container" style="min-height:190px;max-width:285px">
+					in order to re-open the closed window, simply click on the start icon below at the bottom of the page. alternatively, you can click <a href="javascript:void(0);" onclick="closeWindow()">here</a>.<br>
+					if this page is overflown (too small), please resize it. optimal size is 1872x995px
+				</div>
+			</div>
+		</div>
+
+		<!-- The launch menu from Windows 98 -->
+		<div class="fluid-container bar">
+			<div class="start-button" style="width:60px;height:25px;text-align:center">
+				<a href="javascript:void(0);" onclick="closeWindow()">
+					<img src="../media/start-button.png">
+				</a>
+			</div>
+		</div>
+	</body>
+</html>

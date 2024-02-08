@@ -1,152 +1,357 @@
+:root {
+	--light-grey: #c6c6c6;
+}
+
 body {
+	background-color: #008080;
 	color: white;
 	font-family: monospace;
-	width: 100%;
-	image-rendering: pixelated;
+	letter-spacing: 0.025em;
 }
 
-.background {
-	background: url("media/bg.jpg");
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -3;
-}
-
-.background-gradient {
-	background: linear-gradient(-45deg, rgba(0, 0, 10, 0.3), rgba(36, 0, 58, 0.2));
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: -2;
-}
-
-#circles {
-	position: fixed;
-	height: 100%;
-	width: 100vw;
-	z-index: -1;
-}
-
-.circle {
-	position: absolute;
-	border-radius: 50%;
-	filter: blur(30px);
-	transform: scale(2);
-	animation-name: wiggle;
-	animation-duration: 30s;
-	opacity: 40%;
-	animation-iteration-count: infinite;
-	animation-timing-function: linear;
-}
-
-.size-2 {
-	left: 10vw;
-	top: -10vw;
-	height: 22vw;
-	width: 22vw;
-	background-color: #460680;
-	animation-direction: reverse;
-}
-
-.size-1 {
-	right: 23vw;
-	bottom: 12vw;
-	height: 30vw;
-	width: 30vw;
-	background-color: #1f0954;
-	animation-delay: 3s;
-}
-
-.size-3 {
-	left: 0vw;
-	bottom: 0vw;
-	height: 20vw;
-	width: 20vw;
-	background-color: #230f73;
-	animation-delay: 1.5s;
-}
-
-@keyframes wiggle {
-	0% {
-		transform: translate(0, 0) scale(2);
-	}
-
-	20% {
-		transform: translate(20vw, 10vw) scale(2);
-	}
-
-	40% {
-		transform: translate(0vw, 30vw) scale(2);
-	}
-
-	60% {
-		transform: translate(-30vw, 50vw) scale(2);
-	}
-
-	80% {
-		transform: translate(-10vw, 20vw) scale(2);
-	}
-
-	100% {
-		transform: translate(0, 0) scale(2);
-	}
-}
-
-#main {
-	width: 43%;
-	padding: 30px;
-	position: relative;
-	z-index:2;
+/* Make headings bold */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
 	margin: 0;
 }
 
-.blinkies {
-	position: fixed;
-	left: 5%;
-	width: 20%;
-	margin-top: 40px;
-	border-radius: 10px;
-	padding-bottom: 13px;
-	background: linear-gradient(-45deg, rgba(0, 0, 10, 1), rgba(36, 0, 58, 1));
+/* Make horizontal line take up less space */
+hr {
+	margin: 5px 0 5px 0;
 }
 
+p {
+	margin: 5px 0 5px 0;
+}
+
+/* Class for icons */
+.icons {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+
+.icons a {
+	color: white;
+	text-decoration: none;
+}
+
+.desktop-icon {
+	text-align: center;
+}
+
+.desktop-icon img {
+	width: 40px;
+}
+
+.desktop-label {
+	margin-top: 5px;
+	font-size: 11px;
+	text-decoration: none;
+}
+/* ==== */
+
+
+/* Class for images and their figure element containers */
+.bg-img {
+	opacity: 70%;
+	transition: 0.2s;
+}
+
+.bg-img:hover {
+	opacity: 100%;
+}
+
+.img-container {
+	text-align: center;
+	position: absolute;
+	transition: 0.2s;
+}
+/* ==== */
+
+
+/* Caption class */
+.caption-label {
+	font-size: 15px;
+	color: var(--light-grey);
+	width: 100%;
+	transition: 0.2s;
+	margin-top: 5px;
+	cursor: default;
+}
+
+.img-container:hover .caption-label {
+	color: inherit;
+}
+
+.caption-label:hover {
+	color: inherit;
+}
+/* ==== */
+
+
+/* IDs for background images. Each image has a specific rotation */
+#img-first {
+	transform: rotate(-16deg);
+	left: 200px;
+	top: 100px;
+}
+
+#img-first:hover {
+	transform: rotate(0deg);
+}
+
+#img-second {
+	transform: rotate(18deg);
+	right: 280px;
+	top: 170px;
+}
+
+#img-second:hover {
+	transform: rotate(0deg);
+}
+
+#img-third {
+	transform: rotate(7deg);
+	left: 560px;
+	top: 480px;
+}
+
+#img-third:hover {
+	transform: rotate(0deg);
+}
+
+#img-fourth {
+	transform: rotate(-12deg);
+	left: 760px;
+	top: 80px;
+}
+
+#img-fourth:hover {
+	transform: rotate(0deg);
+}
+/* ==== */
+
+
+/* Class for the main content of the page */
+.content {
+	/* Make the page look like a windows 98 window */ 
+	background-color: var(--light-grey);
+	border-top: 2px solid #efefef;
+	border-left: 2px solid #efefef;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+
+	margin-top: 50px;
+	position: relative;
+	z-index: 2;
+	max-height: 850px;
+}
+
+.header {
+	background-color: navy;
+	height: 25px;
+	padding: 0px;
+}
+
+/* Make sure the links are visible in the header */
+.header a {
+	color: white;
+}
+
+.icon {
+	margin: 0 5px 0 0;
+	height: 20px;
+}
+
+.close {
+	position: absolute;
+	right: 0px;
+	top: 3px;
+	background-color: var(--light-grey);
+	border-left: 2px solid #ededed;
+	border-top: 2px solid #ededed;
+	border-right: 2px solid #404040;
+	border-bottom: 2px solid #404040;
+	cursor: pointer;
+}
+
+/* NO padding */
+.nopad {
+	padding: 0;
+}
+
+/* TAB padding */
+.tab {
+	display: inline-block;
+	padding-left: 20px;
+}
+
+/* A pipe symbol for directories in this shape: |_ */
+.directory-pipe {
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border-bottom: solid 1px black;
+	border-left: solid 1px black;
+}
+
+#question {
+	height: auto;
+	overflow: hidden;
+	resize: none;
+}
+
+.outer-container {
+	border-left: 1px solid #dfdfdf;
+	border-top: 1px solid #dfdfdf;
+	border-right: 1px solid #7f7f7f;
+	border-bottom: 1px solid #7f7f7f;
+}
+
+.inner-container {
+	position: relative;
+	background-color: white;
+	color: black;
+	margin: 5px;
+	padding: 7px;
+	overflow: scroll;
+	max-height: 790px;
+	min-height: 790px;
+}
+
+.right {
+	display: inline-block;
+	text-align: right;
+	width: 100%;
+}
+/* ==== */
+
+
+/* Class for the bottom bar from windows computers */
 .bar {
+	position: absolute;
+	bottom: 0;
 	width: 100%;
-	font-size: 20px;
-	background-color: #7d51d0;
-	padding-left: 13px;
-	margin-bottom: 13px;
-}
+	height: 30px;
+	border-top: 1px solid #dfdfdf;
+	background-color: silver;
 
-.blinky {
-	width: 88px;
-}
-
-.main-container {
 	display: flex;
-	width: 100%;
-	justify-content: center;
+	align-items: center;
 }
 
-@media (max-width:800px)  {
-	#main {
-		width: 100%;
+.start-button {
+	margin-left: 5px;
+	background-color: var(--light-grey);
+	border-top: 1px solid #fff;
+	border-left: 1px solid #fff;
+	border-right: 1px solid gray;
+	border-bottom: 1px solid gray;
+	box-shadow: inset 1px 1px #dfdfdf,1px 0 #000,0 1px #000,1px 1px #000;
+	cursor: pointer;
+}
+
+/* Class for an information container */
+.notepad {
+	position: absolute;
+	left: 120px;
+	top: 600px;
+	min-height: 200px;
+	max-width: 300px;
+
+	background-color: var(--light-grey);
+	border-top: 2px solid #efefef;
+	border-left: 2px solid #efefef;
+	border-right: 2px solid black;
+	border-bottom: 2px solid black;
+}
+/* ==== */
+
+/* Classes for blog */
+.blog-header {
+	margin: 7px;
+}
+
+.sources a {
+	color: inherit;
+	text-decoration-style: dotted;
+}
+
+.sources .reg-link {
+	color: rgb(10, 88, 202);
+}
+
+.caption {
+	font-size: 14px;
+}
+
+.text-right {
+	text-align: right;
+}
+/* ==== */
+
+/* Classes for gallery */
+.gallery-showcase {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.gallery-showcase figure {
+	flex: 0 0 auto;
+}
+/* ==== */
+
+
+@media (max-width:600px)  {
+	body {
+		min-height: 100vh;
 	}
 
-	#field-1 {
+	#window {
+		min-width: 100%;
+		margin: 0;
+		min-height: 100vh;
+	}
+
+	.inner-container {
+		max-height: 93vh;
+	}
+
+	.caption-label {
+		text-align: center;
+	}
+
+	#sidebar {
 		display: none;
 	}
 
-	#field-2 {
+	.blog-header {
+		height: 300px;
+		width: auto;
+		text-align: center;
+	}
+
+	.caption-label {
+		color: black;
+	}
+
+	#images {
 		display: none;
 	}
 
-	.blinkies {
+	.bar {
+		display: none;
+	}
+
+	.notepad {
+		display: none;
+	}
+
+	.close {
 		display: none;
 	}
 }
