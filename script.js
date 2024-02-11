@@ -1,7 +1,7 @@
 function load() {
 	let internet = document.getElementById("internet");
 	let corner = document.getElementById("corner");
-	document.getElementById("blinkies").innerHTML = loadPage("blinkies.html");
+	document.getElementById("blinkies").innerHTML = loadPage("/blinkies.html");
 	light();
 }
 
