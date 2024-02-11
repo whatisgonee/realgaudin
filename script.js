@@ -1,7 +1,15 @@
 function load() {
 	let internet = document.getElementById("internet");
 	let corner = document.getElementById("corner");
+	document.getElementById("blinkies").innerHTML = loadPage("blinkies.html");
 	light();
+}
+
+function loadPage(href){
+	var xmlhttp = new XMLHttpRequest();
+	xmlhttp.open("GET", href, false);
+	xmlhttp.send();
+	return xmlhttp.responseText;
 }
 
 async function light() {
