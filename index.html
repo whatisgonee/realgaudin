@@ -67,6 +67,13 @@
 				<h2>my blog</h2>
 				<p>here are my posts:</p>
 				<ul>
+					<li>
+						<button role="menu" id="dropdown-diary-button" onclick="dropdownDiary()">diary</button>
+						<ul style="display:none" id="dropdown-diary-list">
+							a semi-official, quarterly-anonymous, regularly-updated, personal diary.
+							<li><a href="/blog/diary/180224.html">the exam</a> 18.02.24</li>
+						</ul>
+					</li>
 					<li><a href="/blog/russian-classical-literature.html">russian classical literature</a> 11.02.24</li>
 					<li><a href="/blog/how-i-feel-about-my-new-name.html">how i feel about my new name</a> 24.01.24</li>
 					<li><a href="/blog/moving-away-from-youtube.html">moving away from youtube</a> 22.01.24</li>
@@ -83,6 +90,8 @@
 	</body>
 
 	<script>
+		var isDropdownActive = false;
+
 		// get the elements where we are going to render possums
 		var field1 = document.getElementById("field-1");
 
@@ -179,6 +188,16 @@
 			let context = canvas.getContext('2d');
 			context.clearRect(0, 0, canvas.width, canvas.height);
 			document.getElementById("end").style.display = "none";
+		}
+
+		function dropdownDiary() {
+			isDropdownActive = !isDropdownActive;
+			let dropdown = document.getElementById("dropdown-diary-list");
+			if(isDropdownActive) {
+				dropdown.style.display = "block";
+			} else {
+				dropdown.style.display = "none";
+			};
 		}
 	</script>
 </html>

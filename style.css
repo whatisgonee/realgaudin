@@ -133,6 +133,19 @@ body {
 	justify-content: center;
 }
 
+#dropdown-diary-button {
+	background-color: transparent;
+	border: none;
+	outline: none;
+	color: inherit;
+	text-decoration: underline;
+	color: rgba(var(--bs-link-color-rgb),var(--bs-link-opacity,1));;
+}
+
+#dropdown-diary-button:hover {
+	--bs-link-color-rgb: var(--bs-link-hover-color-rgb);
+}
+
 @media (max-width:800px)  {
 	#main {
 		width: 100%;
