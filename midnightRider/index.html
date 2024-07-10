@@ -1,0 +1,443 @@
+<html>
+	<head>
+		<style>
+	      #canvas {
+	      	margin-top: -8px;
+	      	margin-left: -8px;
+	      	width: 100%;
+	        position: relative;
+	        font-family: monospace;
+	        image-rendering: pixelated;
+	      }
+
+        #controls {
+          position: absolute;
+          width: 455px;
+          height: 100px;
+          background-color: #090512;
+          top: 180px;
+
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 15px;
+        }
+
+        .arrow {
+          background-color: transparent;
+          padding: 0;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+
+        .arrow img {
+          width: 32px;
+          height: 32px;
+        }
+
+	      #window {
+	        position: absolute;
+	        z-index: 100;
+	      }
+
+	      #hearts {
+	        position: absolute;
+	        top: 60px;
+	        width: 75px;
+	        text-align: center;
+	        z-index: 104;
+	      }
+
+	      #points {
+	        position: absolute;
+	        z-index: 104;
+	        color: white;
+	        font-weight: bold;
+	        font-size: 18px;
+	        top: 145px;
+	        width: 75px;
+	        left: 0;
+	        text-align: center;
+	      }
+
+	      #background {
+	        position: absolute;
+	        background-image: url("media/background.png");
+	        width: 365px;
+	        height: 125px;
+	        background-size: cover;
+	        top: 15px;
+	        left: 80px;
+	      }
+
+	      #road {
+	        position: absolute;
+	        background-image: url("media/road.png");
+	        width: 365px;
+	        height: 30px;
+	        background-size: cover;
+	        top: 135px;
+	        left: 80px;
+
+	        
+	      }
+
+	      #player {
+	        position: absolute;
+	        background-image: url("media/rider.png");
+	        width: 65px;
+	        height: 50px;
+	        background-size: cover;
+	        top: 105px;
+	        left: 90px;
+	      }
+
+	      #hazards {
+	        position: absolute;
+	        z-index: 5;
+	        top: 137px;
+	        left: 80px;
+	        width: 360px;
+	        display: flex;
+	        flex-direction: row-reverse;
+	      }
+
+	      #hazards img {
+	        position: absolute;
+	      }
+
+	      #start {
+	        position: absolute;
+	        z-index: 105;
+	        width: 455px;
+	        height: 180px;
+	        background-color: #090512;
+	        color: white;
+	        font-weight: bolder;
+	        font-size: 25px;
+
+	        display: flex;
+	        flex-direction: column;
+	        justify-content: center;
+	        align-items: center;
+	      }
+
+	      #start a {
+	        font-size: 18px;
+	        text-decoration: underline;
+	        color: white;
+	      }
+
+	      .bgMove {
+	        animation-name: bgMove;
+	        animation-duration: 45s;
+	        animation-timing-function: linear;
+	        animation-iteration-count: infinite;
+	      }
+
+	      .roadMove {
+	        animation-name: roadMove;
+	        animation-duration: 3s;
+	        animation-timing-function: linear;
+	        animation-iteration-count: infinite;
+	      }
+
+	      .blink {
+	        animation-name: blink;
+	        animation-duration: 0.2s;
+	        animation-timing-function: linear;
+	        animation-iteration-count: infinite;
+	      }
+
+	      @keyframes blink {
+	        0% {
+	          opacity: 100%;
+	        }
+
+	        50% {
+	          opacity: 0%;
+	        }
+
+	        100% {
+	          opacity: 100%;
+	        }
+	      }
+
+	      @keyframes bgMove {
+	        0% {
+	          background-position-x: 0;
+	        }
+
+	        100% {
+	          background-position-x: -1485px;
+	        }
+	      }
+	    </style>
+	</head>
+
+	<body>
+		<div id="canvas">
+        <div id="hearts">
+        </div>
+        <div id="points">00000</div>
+        <img id="window" src="media/window.png" width=455>
+        <div id="background"></div>
+        <div id="road"></div>
+        <div id="player"></div>
+        <div id="hazards"></div>
+        <div id="start">
+          MIDNIGHT RIDER
+          <p></p>
+          <a href="javascript:void(0);" onclick="start()">BEGIN JOURNEY</a>
+        </div>
+        <div id="controls">
+          <button id="arrow-left" onmousedown="moveLeft()" onmouseup="stopMovement()" class="arrow"><img src="media/arrowleft.png"></button>
+          <button id="arrow-up" onmousedown="doJump()" class="arrow" style="padding-bottom: 65px"><img src="media/arrowup.png"></button>
+          <button id="arrow-right" onmousedown="moveRight()" onmouseup="stopMovement()" class="arrow"><img src="media/arrowright.png"></button>
+        </div>
+      </div>
+	</body>
+
+	<script>
+      let canvas = document.getElementById("canvas");
+      let hearts = document.getElementById("hearts");
+      let points = document.getElementById("points");
+      let player = document.getElementById("player");
+      let startEl = document.getElementById("start");
+      let bg = document.getElementById("background");
+      let road = document.getElementById("road");
+      let hazards = document.getElementById("hazards");
+
+      let pos = 90;
+      let vertical = 105;
+      let accel = 0;
+      let jump = 0;
+      let notDead = true;
+      let score = 0;
+      let health = 3;
+      let invincible = false;
+      let speed = 4;
+      let bgPos = 0;
+
+      let hazardList = ["mine.png"]
+      
+      async function start() {
+        hazards.innerHTML = "";
+        health = 3;
+        score = 0;
+        pos = 90;
+        vertical = 105;
+        player.style.left = pos+"px";
+        player.style.top = vertical+"px";
+        notDead = true;
+        startEl.style.background = "transparent";
+        console.log("START");
+        startEl.innerHTML = "";
+        for(let i = 3; i > 0; i--) {
+          startEl.innerHTML = i;
+          await sleep(1000);
+        }
+
+        healthUpdate();
+
+        startEl.innerHTML = "";
+        bg.classList.add("bgMove");
+
+        window.addEventListener("keydown", keyPress);
+        window.addEventListener("keyup", keyUp);
+        loop();
+        awardPoints();
+        hazardSpawn();
+      }
+
+      async function loop() {
+        if(!notDead) {
+          return;
+        }
+        if(accel != 0) {
+          pos += accel;
+          if(pos <= 80) pos = 80;
+          if(pos >= 380) pos = 380;
+          player.style.left = pos + "px";
+        }
+        if(jump != 0) {
+          vertical += jump;
+          player.style.top = vertical + "px";
+        }
+
+        hazardMove();
+        deathCheck();
+        roadMove();
+        setTimeout(loop, 20);
+      }
+
+      function keyPress(e) {
+        if(e.keyCode == 68) {
+          accel = 5;
+        }
+        if(e.keyCode == 65) {
+          accel = -5;
+        }
+        if(jump == 0 && (e.keyCode == 87 || e.keyCode == 32)) {
+          jump = -10;
+          jumpUpdate();
+        }
+      }
+
+      function moveLeft() {
+        accel = -5;
+      }
+
+      function moveRight() {
+        accel = 5;
+      }
+
+      function doJump() {
+        jump = -10;
+        jumpUpdate();
+      }
+
+      function stopMovement() {
+        accel = 0;
+      }
+
+      async function jumpUpdate() {
+        for(let i = 0; i < 10; i++) {
+          jump += 1;
+          await sleep(32)
+        }
+
+        await sleep(60)
+
+        for(let i = 0; i < 9; i++) {
+          jump += 1;
+          await sleep(32);
+        }
+
+        jump = 0;
+        vertical = 105;
+        player.style.top = vertical + "px";
+      }
+
+      function keyUp(e) {
+        if(e.keyCode == 68 || e.keyCode == 65) {
+          accel = 0;
+        }
+      }
+
+      async function hazardSpawn() {
+        if(!notDead) {
+          return;
+        }
+        hazards.innerHTML += '<img class="hazard" style="right:-25px;" height=20 src="media/' + hazardList[Math.floor(Math.random() * hazardList.length)] + '">';
+        await sleep(Math.floor(Math.random() * (2500 - 700) + 700));
+        hazardSpawn();
+      }
+
+      function hazardMove() {
+        let allHazards = document.getElementsByClassName("hazard");
+
+        for(let i = 0; i < allHazards.length; i++) {
+          let right = allHazards[i].style.right.substr(0, allHazards[i].style.right.indexOf("px"));
+          allHazards[i].style.right = Number(right)+speed+"px";
+          if(Number(right)+speed>360) {
+            allHazards[i].remove();
+          }
+        }
+      }
+
+      async function awardPoints() {
+        if(!notDead) {
+          return;
+        }
+        score += 1;
+        points.innerHTML = score;
+        if(score % 100 == 0) {
+          points.classList.add("blink");
+          setTimeout(() => {
+            points.classList.remove("blink");
+            speed += 0.25;
+          }, 600)
+        }
+        await sleep(90-speed);
+        awardPoints();
+      }
+
+      function roadMove() {
+        bgPos -= speed;
+        if(bgPos <= -365) bgPos = 0;
+        road.style.backgroundPositionX = bgPos+"px";
+      }
+
+      async function deathCheck() {
+        let allHazards = document.getElementsByClassName("hazard");
+        for(let i = 0; i < allHazards.length; i++) {
+          let hazardPos = allHazards[i].style.right.substr(0, allHazards[i].style.right.indexOf("px"));
+          hazardPos = 360 - Number(hazardPos)
+          if(!invincible && vertical <= 105 && vertical >= 91 && hazardPos >= pos-65 && hazardPos <= pos+5) {
+            health -= 1;
+            invincibility();
+            healthUpdate();
+            if(health == 0) {
+              notDead = false;
+              window.removeEventListener("keydown", keyPress);
+              window.removeEventListener("keyup", keyUp);
+
+              bg.classList.remove("bgMove");
+
+              await sleep(1000);
+
+              startEl.style.backgroundColor = "#090512";
+              startEl.innerHTML = "GAME OVER<p style=\"font-size:18px\">High Score: " + score + "</p><a href=\"javascript:void(0);\" onclick=\"start()\">Replay</a>";
+            }
+          }
+        }
+      }
+
+      function healthUpdate() {
+        hearts.innerHTML = "";
+        for(let i = 0; i < health; i++) {
+          hearts.innerHTML += "<img src=\"media/heart.png\" height=15> ";
+        }
+      }
+
+      function invincibility() {
+        invincible = true;
+        player.classList.add("blink");
+        setTimeout(() => {
+          invincible = false;
+          player.classList.remove("blink");
+        }, 1000);
+      }
+
+      function pause() {
+      	console.log("PASUSE");
+      	notDead = false;
+      }
+
+      async function resume() {
+      	if(notDead) { 
+      		return;
+      	}
+      	console.log("PASUSE");
+      	notDead = true;
+      	for(let i = 3; i > 0; i--) {
+          startEl.innerHTML = i;
+          await sleep(1000);
+        }
+
+        healthUpdate();
+
+        startEl.innerHTML = "";
+
+        loop();
+        awardPoints();
+        hazardSpawn();
+      }
+
+      function sleep(ms) {
+        return new Promise((resolve) => {setTimeout(resolve, ms)})
+      }
+    </script>
+</html>
