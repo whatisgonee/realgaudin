@@ -115,6 +115,13 @@ body {
 	background: linear-gradient(-45deg, rgba(0, 0, 10, 1), rgba(36, 0, 58, 1));
 }
 
+#webnewz {
+	position: fixed;
+	margin-top: 40px;
+	right: 3%;
+	border-radius: 10px;
+}
+
 .bar {
 	width: 100%;
 	font-size: 20px;
@@ -159,7 +166,7 @@ body {
 		display: none;
 	}
 
-	.blinkies {
+	.disappear {
 		display: none;
 	}
 }
