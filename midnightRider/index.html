@@ -294,8 +294,10 @@
       }
 
       function doJump() {
-        jump = -10;
-        jumpUpdate();
+        if(jump == 0) {
+		jump = -10;
+        	jumpUpdate();
+	}
       }
 
       function stopMovement() {
